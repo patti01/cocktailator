@@ -13,6 +13,15 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-light bg-light justify-content-between fixed-top">
+      <%= link_to root_path, class: "navbar-brand custom-title" do %>
+        <%= image_tag "logo.png", alt: "OpenBar", width: 40 %>Cocktailator
+      <% end %>
+      <form action="/cocktails" method="get" class="form-inline">
+      <input class="form-control mr-sm-2" name="name" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Looking for a cocktail ?</button>
+      </form>
+    </nav>
     <%= yield %>
     <%= javascript_include_tag "application" %>
     <%= javascript_pack_tag "application" %>

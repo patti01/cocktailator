@@ -8,7 +8,7 @@
           <h2><%= @cocktail.name %></h2>
           <h3>Add a new ingredient</h3>
           <%= simple_form_for [cocktail, dose] do |f| %>
-           <%= f.input :description, placeholder: '2cl' %>
+           <%= f.input :description, placeholder: 'type your amount' %>
            <%= f.association :ingredient, collection: Ingredient.all, input_html: { class: "select2" }
            %>
            <%= f.submit "add a cocktail recipe", class: "btn btn-primary" %>
